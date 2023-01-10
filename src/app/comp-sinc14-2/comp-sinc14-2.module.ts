@@ -17,6 +17,7 @@ import { HijoComponent } from './hijo/hijo.component';
   ],
   exports:
   [PadreComponent,
-  HijoComponent]
+  HijoComponent,
+FormsModule]
 })
 export class CompSinc142Module { }

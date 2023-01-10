@@ -2,5 +2,10 @@
 <div>
   <p></p>
 </div>
-<label for="mensaje">Escribe tu mensaje aqui</label>
-<textarea id="mensaje" rows="10"></textarea>
+<h2 class="text-4xl font-bold">{{title}}</h2>
+<button (click)="mostrar()" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">{{accion}}</button>
+<p [hidden]="estado" class="text-xl">{{mensaje}}</p>
+<div class="w-2/3 mx-auto">
+  <label for="mensaje" class="text-xl">Escribe tu mensaje aqui</label>
+  <textarea id="mensaje" rows="10" [(ngModel)]="mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+</div>

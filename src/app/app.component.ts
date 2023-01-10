@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sincrono14-2';
+  title = 'Data Binding Interpolation';
+  estado=false;
+  accion='ocultar';
+  mensaje='';
+
+  mostrar(){
+    if(this.estado) this.accion='ocultar';
+    else this.accion='mostrar';
+    this.estado=!this.estado;
+  }
 }
