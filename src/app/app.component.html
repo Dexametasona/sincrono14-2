@@ -1,11 +1,11 @@
 <router-outlet></router-outlet>
-<div>
-  <p></p>
+<div class="mx-5 mt-5">
+  <h2 class="text-4xl font-bold">{{title}}</h2>
+  <button (click)="mostrar()" [ngClass]="estado? 'bg-white hover:bg-gray-100':'bg-red-500 hover:bg-red-300'" class="text-gray-800 font-semibold py-2 px-4 rounded shadow">{{accion}}</button>
+  <p [hidden]="estado" class="text-xl">aqui va lo escrito: {{mensaje}}</p>
+  <div class="w-2/3 mx-auto">
+    <label for="mensaje" class="text-xl">Escribe tu mensaje aqui</label>
+    <textarea id="mensaje" rows="10" [(ngModel)]="mensaje" class="shadow appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500"></textarea>
+  </div>
 </div>
-<h2 class="text-4xl font-bold">{{title}}</h2>
-<button (click)="mostrar()" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">{{accion}}</button>
-<p [hidden]="estado" class="text-xl">{{mensaje}}</p>
-<div class="w-2/3 mx-auto">
-  <label for="mensaje" class="text-xl">Escribe tu mensaje aqui</label>
-  <textarea id="mensaje" rows="10" [(ngModel)]="mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-</div>
+
